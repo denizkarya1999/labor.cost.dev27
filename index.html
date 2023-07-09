@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Labor Cost Calculator by Dev-27</title>
+  <link type="image/png" sizes="16x16" rel="icon" href="cost.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Labor Cost Calculator</h1>
+
+    <form id="simpleForm">
+      <div class="form-group">
+        <div class="form-group">
+          <label for="budget">Allocated Yearly Budget for Organization:</label>
+          <div class="input-with-currency">
+            <span class="currency-symbol">$</span>
+            <input type="text" id="budget" name="budget" class="budget-input">
+        </div>
+        <hr class="divider">
+        <label for="days">Team Name:</label>
+        <input type="text" id="team" name="team" required>
+      </div>
+      <div class="form-group">
+        <label for="salary">Hourly Salary for Each Employee:</label>
+        <div class="input-with-currency">
+          <span class="currency-symbol">$</span>
+          <input type="text" id="salary" name="salary" class="salary-input">
+        </div>
+        <div class="form-group">
+            <label for="hours">Hours of Work:</label>
+            <input type="number" id="hours" name="hours" min="0" max="24" required>
+          </div>
+          <div class="form-group">
+            <label for="days">Days of Work:</label>
+            <input type="number" id="days" name="days" min="0" max="365" required>
+          </div>
+
+          <div class="form-group">
+            <label for="days">Number of Employees:</label>
+            <input type="number" id="employeeNumber" name="employeeNumber" min="0" required>
+          </div>
+
+          <div class="form-group">
+            <label for="teamNumber">Team Number (for editing purposes):</label>
+            <input type="number" id="teamNumber" name="teamNumber" min="1" required>
+          </div>
+    </div>
+    <div class="buttons">
+      <button id="calculate">Calculate</button>
+      <button id="addTeam" >Add Team</button>
+      <button id="editTeam" >Edit Team</button>
+      <button id="removeTeam" >Remove Team</button>
+    </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
